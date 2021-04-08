@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author Acer
  */
-public class OpenWeatherCity implements Serializable{
+public class OpenWeatherCity{
     private Coord coord;
     private Weather weather;
     private String base;

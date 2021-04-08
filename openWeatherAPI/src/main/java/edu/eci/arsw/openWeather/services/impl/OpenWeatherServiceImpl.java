@@ -5,7 +5,7 @@
  */
 package edu.eci.arsw.openWeather.services.impl;
 
-import com.mashape.unirest.http.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import edu.eci.arsw.openWeather.model.Cloud;
 import edu.eci.arsw.openWeather.model.Coord;
@@ -29,10 +29,10 @@ import org.springframework.stereotype.Service;
  *
  * @author Acer
  */
-
+@Service
 public class OpenWeatherServiceImpl implements OpenWeatherService{
     
-    @Autowired
+    @Autowired    
     WebConnectionService webConnectionService;
     
     public OpenWeatherServiceImpl() {
@@ -41,7 +41,7 @@ public class OpenWeatherServiceImpl implements OpenWeatherService{
     
     @Override
     public OpenWeatherCity getWeatherByCity(String city) throws UnirestException, IOException {
-        JSONObject cityWeather = WebConnectionService.getWeatherByCity(city);
+        JSONObject cityWeather = webConnectionService.getWeatherByCity(city);
 
         JSONObject jsonObject = cityWeather.getJSONObject("coord");
         ObjectMapper mapper = new ObjectMapper();
