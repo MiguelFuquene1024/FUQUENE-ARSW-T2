@@ -7,6 +7,8 @@ package edu.eci.arsw.openWeather.services;
 
 import com.mashape.unirest.http.exceptions.UnirestException;
 
+import edu.eci.arsw.openWeather.model.OpenWeatherCity;
+
 import java.io.IOException;
 
 /**
@@ -14,5 +16,5 @@ import java.io.IOException;
  * @author Acer
  */
 public interface OpenWeatherService {
-    void getWeatherByCity(String city) throws UnirestException, IOException;
+    OpenWeatherCity getWeatherByCity(String city) throws UnirestException, IOException;
 }

@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class Main {
+public class Main implements Serializable{
     private double temp, feels_like, temp_min,temp_max;
     private int pressure, humidity;
     

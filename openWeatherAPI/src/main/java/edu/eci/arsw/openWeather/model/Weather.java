@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class Weather {
+public class Weather implements Serializable{
     
     private int id; 
     private String main, description, icon;

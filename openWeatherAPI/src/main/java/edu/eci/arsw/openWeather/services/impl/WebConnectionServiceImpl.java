@@ -9,13 +9,14 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import edu.eci.arsw.openWeather.services.WebConnectionService;
-
 import org.json.JSONObject;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Acer
  */
+@Service
 public class WebConnectionServiceImpl implements WebConnectionService{
 
     public WebConnectionServiceImpl() {

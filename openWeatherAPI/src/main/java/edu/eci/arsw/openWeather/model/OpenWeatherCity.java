@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class OpenWeatherCity {
+public class OpenWeatherCity implements Serializable{
     private Coord coord;
     private Weather weather;
     private String base;

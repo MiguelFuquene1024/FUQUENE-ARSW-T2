@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class Wind {
+public class Wind implements Serializable{
     private double speed;
     private double deg;
     

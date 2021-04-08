@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class Coord {
+public class Coord implements Serializable{
     private double lon, lat;
 
     public Coord () {

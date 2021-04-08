@@ -5,11 +5,13 @@
  */
 package edu.eci.arsw.openWeather.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Acer
  */
-public class Sys {
+public class Sys implements Serializable{
     private int type, id;
     private String country;
     private Long sunrise, sunset;
@@ -26,7 +28,6 @@ public class Sys {
         this.sunset = sunset;
     }
 
-   
     public int getType() {
         return type;
     }
